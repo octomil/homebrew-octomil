@@ -8,30 +8,17 @@ class Octomil < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/octomil/octomil-python/releases/download/v#{version}/octomil-darwin-arm64.tar.gz"
-      sha256 "PLACEHOLDER"
-    else
-      url "https://github.com/octomil/octomil-python/releases/download/v#{version}/octomil-darwin-amd64.tar.gz"
-      sha256 "PLACEHOLDER"
-    end
+    url "https://github.com/octomil/octomil-python/releases/download/v#{version}/octomil-darwin-arm64.tar.gz"
+    sha256 "f46fd18185fcb5b112169ce7101fae1d01fcb71013a3df9500274a7fc21ec183"
   end
 
   on_linux do
-    if Hardware::CPU.arm?
-      url "https://github.com/octomil/octomil-python/releases/download/v#{version}/octomil-linux-arm64.tar.gz"
-      sha256 "PLACEHOLDER"
-    else
-      url "https://github.com/octomil/octomil-python/releases/download/v#{version}/octomil-linux-amd64.tar.gz"
-      sha256 "PLACEHOLDER"
-    end
+    url "https://github.com/octomil/octomil-python/releases/download/v#{version}/octomil-linux-amd64.tar.gz"
+    sha256 "294a602870455638092120866baa45f639f843bb87dacf0de25859857791aac6"
   end
 
   def install
-    bin.install "octomil"
-    # Install bundled libraries alongside the binary
-    libexec.install Dir["*"] - ["octomil"]
-    # Rewrite the bin symlink to point into libexec
+    libexec.install Dir["*"]
     bin.install_symlink libexec/"octomil"
   end
 
