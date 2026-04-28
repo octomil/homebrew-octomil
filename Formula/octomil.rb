@@ -4,17 +4,17 @@
 class Octomil < Formula
   desc "On-device ML inference — serve models locally with one command"
   homepage "https://octomil.com"
-  version "4.12.1"
+  version "4.12.2"
   license "MIT"
 
   on_macos do
     url "https://github.com/octomil/octomil-python/releases/download/v#{version}/octomil-darwin-arm64.tar.gz"
-    sha256 "bb1e24d484239add072305697bef549dce966f3532cf35e4175ad45cd43fa479"
+    sha256 "410f02e33eddd43d94ac6a46145f0989418da5082dac89f904239141bc31b757"
   end
 
   on_linux do
     url "https://github.com/octomil/octomil-python/releases/download/v#{version}/octomil-linux-amd64.tar.gz"
-    sha256 "d7f3be344e5dffd8b8b4245fd4934027f8a420d76dc9d6452a926df09f7067b1"
+    sha256 "ea3902c76bd47cb9c45347fdc9617f81750ce6613b7beaba8ce87894d817a785"
   end
 
   def install
