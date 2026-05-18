@@ -9,12 +9,12 @@ class Octomil < Formula
 
   on_macos do
     url "https://github.com/octomil/octomil-python/releases/download/v#{version}/octomil-darwin-arm64.tar.gz"
-    sha256 "fea6357b0d10aa5a7d34b934ef819f1ae4b6d7ed674e3a028a7960a54abbf5c7"
+    sha256 "c0e2c3832918f75f06ff5d73176b2aba9a1b80ba6ec083118f50a7173309baab"
   end
 
   on_linux do
     url "https://github.com/octomil/octomil-python/releases/download/v#{version}/octomil-linux-amd64.tar.gz"
-    sha256 "0886cf577fc8c78e92bfa93a3d0c262d4fd16101c641c6473fd4f1b6759e87cb"
+    sha256 "6d9867e0b17c58cfe4129c7324c6691c1da45b6b99772137acda509b6c14cb13"
   end
 
   def install
