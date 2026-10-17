@@ -8,11 +8,13 @@ class Octomil < Formula
   license "MIT"
 
   on_macos do
+    depends_on arch: :arm64
     url "https://github.com/octomil/octomil-python/releases/download/v#{version}/octomil-darwin-arm64.tar.gz"
     sha256 "6386cebca32de6f280c679601ab2b44cc0ba7e933027ba9250c63cbf7ced1aff"
   end
 
   on_linux do
+    depends_on arch: :x86_64
     url "https://github.com/octomil/octomil-python/releases/download/v#{version}/octomil-linux-amd64.tar.gz"
     sha256 "62be9ab339c60ab9a30439645d5b321e9da755f70701e2720cc8ffa4d4ea7a13"
   end
